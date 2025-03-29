@@ -14,7 +14,7 @@ app.get("/", function (req, res) {
   res.sendFile(__dirname + "/views/index.html");
 });
 
-app.get("/api/whoaip", function (req, res) {
+app.get("/api/whoami", function (req, res) {
   const ipaddress = req.ip || req.headers["x-forwarded-for"] || "IP not found";
   const language = req.headers["accept-language"] || "Language not found";
   const software = req.headers["user-agent"] || "Software not found";
